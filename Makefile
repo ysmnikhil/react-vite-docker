@@ -56,18 +56,4 @@ restart: stop start dev
 clear: stop $(ROOT_DIR)/docker-compose.yml
 	$(DOCKER_COMPOSE) down -v --remove-orphans || true
 
-#
-# Git ready
-#
-.PHONY: git-init
-
-git-init:
-	cd $(ROOT_DIR); \
-	git init; \
-	git config user.email "nik.malik7@gmail.com" && git config user.name "Nikhil Malik"
-
-#
-# CS Fixers
-#
-.PHONY: fix-cs
 
